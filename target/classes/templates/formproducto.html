@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title th:text="${titulo}">Insert title here</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+	crossorigin="anonymous">
+</head>
+<body>
+	<h2 th:text="${titulo}"></h2>
+	<!-- En el object se pasa la variable del método crear -->
+	<form th:action="@{/formp}" th:object="${producto}" method="post">
+		<table>
+			<tr>
+				<td>Nombre</td>
+				<td><input type="text" th:field="*{nombre}" /></td>
+			</tr>
+			<tr>
+				<td>Cantidad</td>
+				<td><input type="number" th:field="*{cantidad}" /></td>
+			</tr>
+			<tr>
+				<td>Precio</td>
+				<td><input type="number" th:field="*{precio}" /></td>
+			</tr>
+			<tr>
+				<td>Foto</td>
+				<td><input type="text" th:field="*{foto}" /></td>
+			</tr>
+			<tr>
+			<tr>
+				<td>Categoria</td>
+				<td>
+				<select th:field="*{categoria.id}" class="form-control" >
+				   <th:block th:each="categoria:${listaCategorias}">
+				      <option th:text="${categoria.nombre}" th:value="${categoria.id}"></option>
+				   </th:block>
+				</select>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><input type="submit" value="Crear Producto" /></td>
+			</tr>
+		</table>
+	       <td><input type="hidden" th:field="*{id}"/></td>
+	</form>
+		<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+		crossorigin="anonymous"></script>
+</body>
+</html>

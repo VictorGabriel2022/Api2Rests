@@ -1,0 +1,9 @@
+hck\idat\springboot\data\jpa\app\models\entity\Producto.class
+hck\idat\springboot\data\jpa\app\models\dao\ICategoriaDao.class
+hck\idat\springboot\data\jpa\app\models\entity\Categoria.class
+hck\idat\springboot\data\jpa\app\controller\ProductoController.class
+hck\idat\springboot\data\jpa\app\models\dao\CategoriaDaoImpl.class
+hck\idat\springboot\data\jpa\app\controller\CategoriaController.class
+hck\idat\springboot\data\jpa\app\ProyectowebApplication.class
+hck\idat\springboot\data\jpa\app\models\dao\IProductoDao.class
+hck\idat\springboot\data\jpa\app\models\dao\ProductoDaoImpI.class
